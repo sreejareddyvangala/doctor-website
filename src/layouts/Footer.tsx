@@ -34,16 +34,19 @@ export function Footer() {
               patients treated.
             </p>
 
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap items-center gap-3">
+              {/* The number is not shown — it lives in the aria-label and href. */}
               <a
                 href={contact.phoneHref}
+                aria-label={`Call the clinic on ${contact.phone}`}
+                title="Call Us"
                 className="inline-flex items-center gap-2 rounded-lg bg-green-500 px-5 py-2 text-sm font-semibold text-white transition-colors duration-150 hover:bg-green-600"
               >
                 <IconPhone className="h-4 w-4" />
-                {contact.phone}
+                Call Us
               </a>
 
-              <WhatsAppButton label="WhatsApp" />
+              <WhatsAppButton iconOnly />
             </div>
           </div>
 

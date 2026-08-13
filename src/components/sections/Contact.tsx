@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom';
 
 import { Section, SectionHeading } from '@/components/Section';
-import { WhatsAppButton } from '@/components/WhatsAppButton';
 import { contact, doctor } from '@/data/site';
 import { locations } from '@/data/locations';
-import { IconCalendar, IconLocation, IconPhone, IconWhatsApp } from '@/components/icons';
+import { IconCalendar, IconLocation, IconPhone } from '@/components/icons';
 
 interface ContactProps {
   headingLevel?: 'h1' | 'h2';
@@ -22,8 +21,8 @@ export function Contact({ headingLevel = 'h2', tone = 'gray' }: ContactProps) {
         title="Contact Us"
       />
 
-      <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-        {/* Phone */}
+      <div className="mx-auto grid max-w-4xl grid-cols-1 gap-8 sm:grid-cols-3">
+        {/* Call Us — the number itself is not shown; the card is the action. */}
         <div className="rounded-2xl border border-gray-100 bg-white p-6 text-center shadow-sm">
           <span
             aria-hidden="true"
@@ -31,27 +30,15 @@ export function Contact({ headingLevel = 'h2', tone = 'gray' }: ContactProps) {
           >
             <IconPhone className="h-6 w-6" />
           </span>
-          <h3 className="mb-1 font-bold text-gray-900">Phone</h3>
+          <h3 className="mb-1 font-bold text-gray-900">Call Us</h3>
           <p className="mb-3 text-sm text-gray-500">{doctor.name}</p>
           <a
             href={contact.phoneHref}
+            aria-label={`Call the clinic on ${contact.phone}`}
             className="inline-block rounded-lg bg-green-500 px-5 py-2 text-sm font-semibold text-white transition-colors duration-150 hover:bg-green-600"
           >
-            Call Now: {contact.phone}
+            Call Us
           </a>
-        </div>
-
-        {/* WhatsApp */}
-        <div className="rounded-2xl border border-gray-100 bg-white p-6 text-center shadow-sm">
-          <span
-            aria-hidden="true"
-            className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-blue-700"
-          >
-            <IconWhatsApp className="h-6 w-6" />
-          </span>
-          <h3 className="mb-1 font-bold text-gray-900">WhatsApp</h3>
-          <p className="mb-3 text-sm text-gray-500">Message us directly</p>
-          <WhatsAppButton />
         </div>
 
         {/* Locations */}
