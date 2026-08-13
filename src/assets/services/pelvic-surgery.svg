@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Illustration of the pelvic ring and acetabulum indicating specialised pelvic and acetabular surgical care">
+  <defs>
+    <linearGradient id="ps-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EAF6FF"/>
+      <stop offset="1" stop-color="#CFE7FB"/>
+    </linearGradient>
+    <linearGradient id="ps-bone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E3F0FB"/>
+    </linearGradient>
+    <linearGradient id="ps-fix" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3ACD80"/>
+      <stop offset="1" stop-color="#16A34A"/>
+    </linearGradient>
+    <radialGradient id="ps-glow" cx="0.5" cy="0.45" r="0.55">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#ps-bg)"/>
+  <circle cx="150" cy="150" r="150" fill="#0F6CBD" opacity="0.06"/>
+  <circle cx="660" cy="470" r="160" fill="#22C55E" opacity="0.07"/>
+  <rect width="800" height="600" fill="url(#ps-glow)"/>
+
+  <g transform="translate(400 300)">
+    <!-- Sacrum -->
+    <path d="M-34 -150 h68 c10 0 18 8 17 18 l-11 108 c-1 12 -11 20 -23 20 h-34 c-12 0 -22 -8 -23 -20 l-11 -108 c-1 -10 7 -18 17 -18z"
+          fill="url(#ps-bone)" stroke="#0F6CBD" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M-28 -104 h56 M-25 -66 h50 M-22 -28 h44" stroke="#0F6CBD" stroke-width="5" stroke-linecap="round" opacity="0.45"/>
+
+    <!-- Left iliac wing + acetabulum -->
+    <path d="M-46 -142 c-70 -22 -142 6 -166 72 -22 62 4 130 56 158 34 18 74 10 92 -20 14 -24 10 -54 -8 -74 24 -18 34 -50 28 -84 -4 -26 -2 -44 -2 -52z"
+          fill="url(#ps-bone)" stroke="#0F6CBD" stroke-width="7" stroke-linejoin="round"/>
+    <circle cx="-138" cy="76" r="46" fill="#EAF6FF" stroke="#0F6CBD" stroke-width="7"/>
+
+    <!-- Right iliac wing + acetabulum -->
+    <path d="M46 -142 c70 -22 142 6 166 72 22 62 -4 130 -56 158 -34 18 -74 10 -92 -20 -14 -24 -10 -54 8 -74 -24 -18 -34 -50 -28 -84 4 -26 2 -44 2 -52z"
+          fill="url(#ps-bone)" stroke="#0F6CBD" stroke-width="7" stroke-linejoin="round"/>
+    <circle cx="138" cy="76" r="46" fill="#EAF6FF" stroke="#0F6CBD" stroke-width="7"/>
+
+    <!-- Pubic rami closing the ring -->
+    <path d="M-104 130 c34 32 74 46 104 46 s70 -14 104 -46" fill="none" stroke="#0F6CBD" stroke-width="24" stroke-linecap="round" opacity="0.28"/>
+    <path d="M-104 130 c34 32 74 46 104 46 s70 -14 104 -46" fill="none" stroke="#0F6CBD" stroke-width="7" stroke-linecap="round"/>
+
+    <!-- Reconstruction plate + screws (surgical fixation) -->
+    <g>
+      <path d="M-192 -6 c26 -34 62 -54 96 -58" fill="none" stroke="url(#ps-fix)" stroke-width="18" stroke-linecap="round"/>
+      <circle cx="-176" cy="-24" r="7" fill="#FFFFFF"/>
+      <circle cx="-146" cy="-44" r="7" fill="#FFFFFF"/>
+      <circle cx="-112" cy="-58" r="7" fill="#FFFFFF"/>
+    </g>
+  </g>
+</svg>

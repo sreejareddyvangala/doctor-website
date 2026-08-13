@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Typography note: the Rocket site links Inter but renders in Tailwind's
+ * default `font-sans` stack (ui-sans-serif / system-ui). We deliberately do
+ * NOT override fontFamily anywhere, so the type matches the live site.
+ */
+
+@layer base {
+  :root {
+    /* Fixed header height — matches the Rocket header exactly (72px). */
+    --header-h: 72px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* Sticky-header offset for anchor jumps and focus scrolling. */
+    scroll-padding-top: calc(var(--header-h) + 16px);
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+
+  body {
+    @apply bg-white text-gray-900 antialiased;
+    /* Guard against accidental horizontal overflow on small screens. */
+    overflow-x: hidden;
+  }
+
+  /* Keyboard focus ring, using the site's existing blue. */
+  :focus-visible {
+    @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+    border-radius: 0.5rem;
+  }
+
+  img {
+    @apply max-w-full;
+  }
+}
+
+@layer components {
+  /* The Rocket container: max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 */
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-blue-700 focus:px-5 focus:py-3 focus:text-sm focus:font-semibold focus:text-white;
+  }
+}
+
+@layer utilities {
+  .scrollbar-none {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}

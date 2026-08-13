@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Illustration of a knee joint with a joint-replacement implant surface">
+  <defs>
+    <linearGradient id="kr-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EAF6FF"/>
+      <stop offset="1" stop-color="#CFE7FB"/>
+    </linearGradient>
+    <linearGradient id="kr-bone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E3F0FB"/>
+    </linearGradient>
+    <linearGradient id="kr-imp" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3ACD80"/>
+      <stop offset="1" stop-color="#16A34A"/>
+    </linearGradient>
+    <radialGradient id="kr-glow" cx="0.5" cy="0.45" r="0.55">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#kr-bg)"/>
+  <circle cx="640" cy="120" r="150" fill="#0F6CBD" opacity="0.06"/>
+  <circle cx="150" cy="500" r="180" fill="#22C55E" opacity="0.07"/>
+  <rect width="800" height="600" fill="url(#kr-glow)"/>
+
+  <g transform="translate(400 300)">
+    <!-- Femur: shaft widening into two condyles -->
+    <path d="M-52 -230 h104 v118 c0 26 18 34 30 52 14 21 16 52 -4 70 -22 20 -54 12 -74 -8 -10 -10 -14 -22 -14 -34 h-4 c0 12 -4 24 -14 34 -20 20 -52 28 -74 8 -20 -18 -18 -49 -4 -70 12 -18 30 -26 30 -52z"
+          fill="url(#kr-bone)" stroke="#0F6CBD" stroke-width="7" stroke-linejoin="round"/>
+    <!-- Femoral implant cap -->
+    <path d="M-104 -10 c-6 20 0 44 16 56 20 16 48 10 64 -8 8 -9 12 -20 12 -31 h24 c0 11 4 22 12 31 16 18 44 24 64 8 16 -12 22 -36 16 -56 -12 14 -30 24 -50 26 -22 3 -42 -4 -54 -14 -12 10 -32 17 -54 14 -20 -2 -38 -12 -50 -26z"
+          fill="url(#kr-imp)" opacity="0.92"/>
+
+    <!-- Tibia: plateau over shaft -->
+    <path d="M-96 74 c0 -16 14 -28 32 -30 h128 c18 2 32 14 32 30 v22 c0 18 -14 30 -30 34 l-14 4 v96 h-104 v-96 l-14 -4 c-16 -4 -30 -16 -30 -34z"
+          fill="url(#kr-bone)" stroke="#0F6CBD" stroke-width="7" stroke-linejoin="round"/>
+    <!-- Tibial implant tray -->
+    <rect x="-96" y="72" width="192" height="30" rx="15" fill="url(#kr-imp)"/>
+
+    <!-- Patella -->
+    <ellipse cx="-152" cy="26" rx="26" ry="38" fill="url(#kr-bone)" stroke="#0F6CBD" stroke-width="7"/>
+
+    <!-- Joint-space motion cue -->
+    <path d="M118 22 q34 22 0 44" fill="none" stroke="#22C55E" stroke-width="7" stroke-linecap="round" opacity="0.75"/>
+    <path d="M144 6 q54 40 0 76" fill="none" stroke="#22C55E" stroke-width="7" stroke-linecap="round" opacity="0.4"/>
+  </g>
+</svg>

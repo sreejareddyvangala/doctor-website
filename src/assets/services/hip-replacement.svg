@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Illustration of a hip joint with a ball-and-socket replacement implant">
+  <defs>
+    <linearGradient id="hr-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EAF6FF"/>
+      <stop offset="1" stop-color="#CFE7FB"/>
+    </linearGradient>
+    <linearGradient id="hr-bone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E3F0FB"/>
+    </linearGradient>
+    <linearGradient id="hr-imp" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3ACD80"/>
+      <stop offset="1" stop-color="#16A34A"/>
+    </linearGradient>
+    <radialGradient id="hr-glow" cx="0.5" cy="0.45" r="0.55">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#hr-bg)"/>
+  <circle cx="170" cy="130" r="150" fill="#0F6CBD" opacity="0.06"/>
+  <circle cx="650" cy="480" r="170" fill="#22C55E" opacity="0.07"/>
+  <rect width="800" height="600" fill="url(#hr-glow)"/>
+
+  <g transform="translate(400 300)">
+    <!-- Pelvic wing with acetabulum -->
+    <path d="M-40 -190 c86 -30 176 6 206 84 26 68 6 140 -46 176 -40 28 -92 24 -122 -8 -26 -28 -30 -68 -14 -100 -44 -6 -76 -40 -78 -84 -2 -38 20 -56 54 -68z"
+          fill="url(#hr-bone)" stroke="#0F6CBD" stroke-width="7" stroke-linejoin="round"/>
+    <!-- Acetabular cup (implant) -->
+    <path d="M-16 22 a74 74 0 1 1 148 0 a74 74 0 0 0 -148 0z" fill="url(#hr-imp)" opacity="0.35"/>
+    <path d="M-16 22 a74 74 0 0 1 148 0" fill="none" stroke="url(#hr-imp)" stroke-width="16" stroke-linecap="round"/>
+
+    <!-- Femoral head (ball) -->
+    <circle cx="58" cy="30" r="52" fill="url(#hr-imp)"/>
+    <circle cx="42" cy="14" r="16" fill="#FFFFFF" opacity="0.45"/>
+
+    <!-- Femoral stem + shaft -->
+    <path d="M58 30 l-64 46" stroke="url(#hr-imp)" stroke-width="26" stroke-linecap="round"/>
+    <path d="M-72 62 c-24 16 -36 40 -38 68 l-16 130 h96 l14 -136 c2 -22 -6 -44 -24 -56z"
+          fill="url(#hr-bone)" stroke="#0F6CBD" stroke-width="7" stroke-linejoin="round"/>
+    <!-- Greater trochanter -->
+    <path d="M-96 44 c-26 -4 -46 12 -48 36 -2 22 12 38 34 40" fill="url(#hr-bone)" stroke="#0F6CBD" stroke-width="7" stroke-linejoin="round"/>
+
+    <!-- Range-of-motion arc -->
+    <path d="M150 96 a110 110 0 0 1 -66 84" fill="none" stroke="#22C55E" stroke-width="7" stroke-linecap="round" opacity="0.6"/>
+  </g>
+</svg>

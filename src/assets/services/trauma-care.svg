@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Illustration of orthopedic trauma care showing a fractured bone supported by a protective cast">
+  <defs>
+    <linearGradient id="tc-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EAF6FF"/>
+      <stop offset="1" stop-color="#CFE7FB"/>
+    </linearGradient>
+    <linearGradient id="tc-bone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E3F0FB"/>
+    </linearGradient>
+    <linearGradient id="tc-cast" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3ACD80"/>
+      <stop offset="1" stop-color="#16A34A"/>
+    </linearGradient>
+    <radialGradient id="tc-glow" cx="0.5" cy="0.45" r="0.55">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#tc-bg)"/>
+  <circle cx="640" cy="460" r="160" fill="#0F6CBD" opacity="0.06"/>
+  <circle cx="160" cy="140" r="150" fill="#22C55E" opacity="0.07"/>
+  <rect width="800" height="600" fill="url(#tc-glow)"/>
+
+  <g transform="translate(400 300) rotate(-28)">
+    <!-- Long bone, upper segment -->
+    <path d="M-250 -58 c-30 -22 -72 -14 -88 14 -16 26 -6 60 22 72 -26 18 -30 56 -8 78 24 24 66 18 84 -10 l14 -22 l124 32 l-24 92 l-118 -30"
+          fill="url(#tc-bone)" stroke="#0F6CBD" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+    <!-- Long bone, lower segment (displaced across fracture line) -->
+    <path d="M62 24 l128 32 l16 -20 c20 -26 62 -30 84 -6 24 24 18 62 -10 78 28 14 36 50 18 74 -20 26 -62 28 -86 6 l-14 -14 l-160 -42z"
+          fill="url(#tc-bone)" stroke="#0F6CBD" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+    <!-- Fracture line -->
+    <path d="M-30 6 l40 22 l-30 26 l44 20" fill="none" stroke="#0F6CBD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" opacity="0.65"/>
+    <!-- Supportive cast / immobilization wrap -->
+    <g opacity="0.9">
+      <rect x="-96" y="-46" width="196" height="128" rx="46" fill="url(#tc-cast)" opacity="0.28"/>
+      <path d="M-90 -10 h184 M-88 26 h188 M-78 62 h182" stroke="#16A34A" stroke-width="9" stroke-linecap="round" opacity="0.65"/>
+      <rect x="-96" y="-46" width="196" height="128" rx="46" fill="none" stroke="#16A34A" stroke-width="8"/>
+    </g>
+  </g>
+
+  <!-- Care cross badge -->
+  <g transform="translate(636 152)">
+    <circle r="46" fill="#0F6CBD"/>
+    <path d="M-22 0h44M0 -22v44" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"/>
+  </g>
+</svg>
