@@ -32,9 +32,16 @@ export function Locations({ headingLevel = 'h2', tone = 'white' }: LocationsProp
                 🏥
               </div>
 
-              <h3 className="mb-4 text-lg font-bold leading-snug text-gray-900">{clinic.name}</h3>
+              {/* Reserved name area so TIMINGS starts at the same height on
+                  every card. Columns are narrowest between sm and lg, where the
+                  longest clinic name needs more lines, so the reserve grows there. */}
+              <h3 className="mb-4 flex min-h-[3.25rem] items-center justify-center text-lg font-bold leading-snug text-gray-900 sm:min-h-[6.5rem] lg:min-h-[3.25rem]">
+                {clinic.name}
+              </h3>
 
-              <div className="mb-4 text-left">
+              {/* flex-1 absorbs the difference between one and two timing lines,
+                  so the divider, fee and both buttons align across all cards. */}
+              <div className="mb-4 flex-1 text-left">
                 <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-blue-700">
                   Timings
                 </p>

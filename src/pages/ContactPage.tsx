@@ -9,13 +9,13 @@ export default function ContactPage() {
     <>
       <SeoHead
         title="Contact"
-        description={`Contact ${doctor.name} — call ${contact.phone} or email ${contact.email}. Consultations at three clinic locations.`}
+        description={`Contact ${doctor.name} — call or message ${contact.phone} on WhatsApp. Consultations at three clinic locations.`}
       />
 
       <PageHero
         eyebrow="Contact"
         title="Contact the clinic"
-        description={`Call ${contact.phone}, email ${contact.email}, or request an appointment online.`}
+        description={`Call ${contact.phone}, message us on WhatsApp, or request an appointment online.`}
         crumbs={[{ label: 'Contact' }]}
       />
 

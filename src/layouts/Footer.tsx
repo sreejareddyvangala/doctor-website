@@ -1,10 +1,11 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 import { Container } from '@/components/Container';
+import { WhatsAppButton } from '@/components/WhatsAppButton';
 import { contact, doctor, navItems } from '@/data/site';
 import { serviceLinks } from '@/data/services';
 import { scrollToSection } from '@/utils/scroll';
-import { IconMail, IconPhone } from '@/components/icons';
+import { IconPhone } from '@/components/icons';
 
 /** Rocket footer: bg-gray-900, 4-column grid, blue-400 designation, gray-400 body. */
 export function Footer() {
@@ -42,13 +43,7 @@ export function Footer() {
                 {contact.phone}
               </a>
 
-              <a
-                href={contact.emailHref}
-                className="inline-flex items-center gap-2 rounded-lg border border-gray-700 px-5 py-2 text-sm font-semibold text-gray-300 transition-colors duration-150 hover:border-blue-400 hover:text-white"
-              >
-                <IconMail className="h-4 w-4" />
-                <span className="break-all">{contact.email}</span>
-              </a>
+              <WhatsAppButton label="WhatsApp" />
             </div>
           </div>
 

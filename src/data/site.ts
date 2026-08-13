@@ -27,9 +27,35 @@ export const contact = {
   phone: '9666243447',
   phoneDisplay: '96662 43447',
   phoneHref: 'tel:9666243447',
+  /**
+   * Retained for the Privacy Policy and Terms pages only — those need a written
+   * contact route. It is deliberately NOT shown in Contact Us or the Footer.
+   */
   email: 'drkranthiorthocare@gmail.com',
   emailHref: 'mailto:drkranthiorthocare@gmail.com',
 } as const;
+
+/**
+ * Clinic WhatsApp configuration — the single place this number is defined.
+ *
+ * `number` must be in international format, digits only and no leading "+",
+ * because that is what wa.me requires. It is the same clinic line as
+ * `contact.phone` with India's 91 country code prefixed.
+ *
+ * NOTE: this is the plain "click to chat" link only. It is unrelated to the
+ * WhatsApp Business Platform (Cloud API), which will need its own credentials
+ * in environment variables and its own phone number in a later phase.
+ */
+export const whatsapp = {
+  number: '919666243447',
+  display: '9666243447',
+  defaultMessage:
+    'Hello, I would like to enquire about an appointment with Dr. Kranthi.',
+} as const;
+
+/** Builds a wa.me deep link, optionally overriding the pre-filled message. */
+export const whatsappHref = (message: string = whatsapp.defaultMessage): string =>
+  `https://wa.me/${whatsapp.number}?text=${encodeURIComponent(message)}`;
 
 export const seo = {
   title: 'Dr. S. Kranthi Reddy | Consultant Trauma & Arthroplasty Surgeon',
