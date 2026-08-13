@@ -107,12 +107,12 @@ export function FloatingWhatsApp({ message }: { message?: string }) {
       href={whatsappHref(message)}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Chat with the clinic on WhatsApp (opens in a new tab)"
+      aria-label="Chat on WhatsApp"
+      title="Chat on WhatsApp"
       style={{ bottom: 'max(1.25rem, env(safe-area-inset-bottom, 0px))' }}
-      className="fixed right-5 z-40 inline-flex h-14 w-14 items-center justify-center gap-2 rounded-full bg-green-500 text-sm font-semibold text-white shadow-lg transition-colors duration-150 hover:bg-green-600 sm:h-auto sm:w-auto sm:px-5 sm:py-3"
+      className="fixed right-5 z-40 inline-flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-white shadow-lg transition-colors duration-150 hover:bg-green-600"
     >
-      <IconWhatsApp className="h-7 w-7 shrink-0 sm:h-5 sm:w-5" />
-      <span className="hidden sm:inline">Chat on WhatsApp</span>
+      <IconWhatsApp className="h-7 w-7 shrink-0" />
     </a>
   );
 }
