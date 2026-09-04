@@ -1,5 +1,5 @@
 // A single doctor portrait is used site-wide (white coat with stethoscope).
-import doctorPhoto from '@/assets/doctor-about.jpg';
+import doctorPhoto from '@/assets/doctor-about.png';
 import doctorPhotoSmall from '@/assets/doctor-about-sm.jpg';
 
 /**
@@ -15,10 +15,10 @@ export const doctor = {
   patients: '10,000+ Patients Treated',
   /** The one doctor photograph used across the whole site. */
   photo: doctorPhoto,
-  photoWidth: 1000,
-  photoHeight: 1333,
+  photoWidth: 1085,
+  photoHeight: 1450,
   /** 600w variant so phones don't download the full-size portrait. */
-  photoSrcSet: `${doctorPhotoSmall} 600w, ${doctorPhoto} 1000w`,
+  photoSrcSet: `${doctorPhotoSmall} 600w, ${doctorPhoto} 1085w`,
   photoAlt:
     'Portrait of Dr. S. Kranthi Reddy, Consultant Trauma and Arthroplasty Surgeon, in a white coat with a stethoscope',
 } as const;
