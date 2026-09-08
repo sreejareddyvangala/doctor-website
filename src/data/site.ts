@@ -15,12 +15,12 @@ export const doctor = {
   patients: '10,000+ Patients Treated',
   /** The one doctor photograph used across the whole site. */
   photo: doctorPhoto,
-  photoWidth: 1085,
-  photoHeight: 1450,
-  /** 600w variant so phones don't download the full-size portrait. */
-  photoSrcSet: `${doctorPhotoSmall} 600w, ${doctorPhoto} 1085w`,
+  photoWidth: 448,
+  photoHeight: 601,
+  /** 300w variant so phones do not download the full-size portrait. */
+  photoSrcSet: `${doctorPhotoSmall} 300w, ${doctorPhoto} 448w`,
   photoAlt:
-    'Portrait of Dr. S. Kranthi Reddy, Consultant Trauma and Arthroplasty Surgeon, in a white coat with a stethoscope',
+    'Portrait of Dr. S. Kranthi Reddy, Consultant Trauma and Arthroplasty Surgeon, in navy surgical scrubs',
 } as const;
 
 export const contact = {

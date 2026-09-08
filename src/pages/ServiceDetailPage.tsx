@@ -54,7 +54,7 @@ export default function ServiceDetailPage() {
               alt={service.imageAlt}
               loading="eager"
               decoding="async"
-              className="h-56 w-full bg-gray-50 object-contain"
+              className="aspect-[4/3] w-full object-cover object-center"
             />
 
             <div className="space-y-3 p-6">
