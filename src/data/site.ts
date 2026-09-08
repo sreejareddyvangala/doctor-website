@@ -1,5 +1,5 @@
 // A single doctor portrait is used site-wide (white coat with stethoscope).
-import doctorPhoto from '@/assets/doctor-about.png';
+import doctorPhoto from '@/assets/doctor-about.jpg';
 import doctorPhotoSmall from '@/assets/doctor-about-sm.jpg';
 
 /**
