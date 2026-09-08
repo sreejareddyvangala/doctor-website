@@ -24,13 +24,13 @@ export function ServiceCard({ service, eager = false }: ServiceCardProps) {
       aria-label={`${service.title} — view treatment details`}
       className="group block cursor-pointer overflow-hidden rounded-2xl border border-gray-100 bg-white text-left shadow-sm transition-all duration-200 hover:border-blue-200 hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
     >
-      <div className="relative h-48 overflow-hidden">
+      <div className="relative h-48 overflow-hidden bg-gray-50">
         <img
           src={service.image}
           alt={service.imageAlt}
           loading={eager ? 'eager' : 'lazy'}
           decoding="async"
-          className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+          className="absolute inset-0 h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
         />
       </div>
 
