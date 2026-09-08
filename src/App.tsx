@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
+import { APP as AREA_FINDER } from '@/features/area-finder/config';
 import { RootLayout } from '@/layouts/RootLayout';
 import HomePage from '@/pages/HomePage';
 
@@ -17,6 +18,9 @@ const PrivacyPolicyPage = lazy(() => import('@/pages/PrivacyPolicyPage'));
 const TermsPage = lazy(() => import('@/pages/TermsPage'));
 const NotFoundPage = lazy(() => import('@/pages/NotFoundPage'));
 
+/* The Area Finder is a standalone tool with its own shell, outside the clinic layout. */
+const AreaFinderPage = lazy(() => import('@/features/area-finder/AreaFinderPage'));
+
 function RouteFallback() {
   return (
     <div className="grid min-h-[60vh] place-items-center" role="status" aria-live="polite">
@@ -32,6 +36,15 @@ function RouteFallback() {
 export default function App() {
   return (
     <Routes>
+      <Route
+        path={AREA_FINDER.route}
+        element={
+          <Suspense fallback={<RouteFallback />}>
+            <AreaFinderPage />
+          </Suspense>
+        }
+      />
+
       <Route element={<RootLayout />}>
         <Route index element={<HomePage />} />
 

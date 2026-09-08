@@ -26,3 +26,6 @@ pnpm-debug.log*
 .env
 .env.*
 !.env.example
+
+# OpenStreetMap response cache (see AREA_OSM_CACHE_DIR)
+.cache/

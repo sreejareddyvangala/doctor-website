@@ -1,0 +1,151 @@
+import type { MockCity } from '../types.ts';
+
+/**
+ * Illustrative sample data for Hyderabad.
+ *
+ * Every number is a relative index (0-100) chosen to reflect the locality's
+ * general character. These are NOT measurements: replace this source with
+ * real data before relying on the results.
+ */
+export const hyderabad: MockCity = {
+  name: 'Hyderabad',
+  aliases: ['hyd', 'hyderabad city', 'secunderabad', 'cyberabad'],
+  areas: [
+    {
+      id: 'gachibowli',
+      name: 'Gachibowli',
+      zone: 'West Hyderabad',
+      traits: ['IT corridor', 'High-rise residential', 'Universities nearby'],
+      population: 78, footfall: 92, affluence: 90, youngProfessionals: 96, families: 55, students: 65, growth: 94,
+      competition: { fitness: 58, food: 72, education: 50, healthcare: 55, retail: 60, beauty: 50, services: 62 },
+    },
+    {
+      id: 'kondapur',
+      name: 'Kondapur',
+      zone: 'West Hyderabad',
+      traits: ['Dense residential', 'Young families', 'Close to IT parks'],
+      population: 90, footfall: 78, affluence: 78, youngProfessionals: 88, families: 75, students: 50, growth: 85,
+      competition: { fitness: 55, food: 75, education: 65, healthcare: 68, retail: 70, beauty: 62, services: 55 },
+    },
+    {
+      id: 'madhapur',
+      name: 'Madhapur',
+      zone: 'West Hyderabad',
+      traits: ['HITEC City', 'Commercial hub', 'Nightlife'],
+      population: 72, footfall: 96, affluence: 82, youngProfessionals: 92, families: 40, students: 45, growth: 70,
+      competition: { fitness: 82, food: 92, education: 40, healthcare: 60, retail: 72, beauty: 78, services: 70 },
+    },
+    {
+      id: 'narsingi',
+      name: 'Narsingi',
+      zone: 'West Hyderabad',
+      traits: ['Emerging suburb', 'New gated communities', 'Ring road access'],
+      population: 58, footfall: 45, affluence: 76, youngProfessionals: 80, families: 68, students: 25, growth: 96,
+      competition: { fitness: 25, food: 35, education: 38, healthcare: 32, retail: 30, beauty: 28, services: 30 },
+    },
+    {
+      id: 'manikonda',
+      name: 'Manikonda',
+      zone: 'West Hyderabad',
+      traits: ['Mid-rise residential', 'Mixed income', 'Commuter belt'],
+      population: 82, footfall: 60, affluence: 62, youngProfessionals: 78, families: 66, students: 40, growth: 78,
+      competition: { fitness: 50, food: 62, education: 58, healthcare: 55, retail: 58, beauty: 52, services: 45 },
+    },
+    {
+      id: 'tellapur',
+      name: 'Tellapur',
+      zone: 'West Hyderabad',
+      traits: ['Upcoming township', 'Gated communities', 'Low footfall today'],
+      population: 40, footfall: 28, affluence: 78, youngProfessionals: 82, families: 70, students: 15, growth: 98,
+      competition: { fitness: 15, food: 22, education: 28, healthcare: 20, retail: 18, beauty: 15, services: 18 },
+    },
+    {
+      id: 'kukatpally',
+      name: 'Kukatpally',
+      zone: 'North-West Hyderabad',
+      traits: ['Retail hub', 'Dense residential', 'Metro connected'],
+      population: 95, footfall: 90, affluence: 60, youngProfessionals: 65, families: 85, students: 70, growth: 55,
+      competition: { fitness: 62, food: 78, education: 80, healthcare: 75, retail: 90, beauty: 70, services: 65 },
+    },
+    {
+      id: 'miyapur',
+      name: 'Miyapur',
+      zone: 'North-West Hyderabad',
+      traits: ['Growing residential', 'Metro terminus', 'Family neighbourhoods'],
+      population: 85, footfall: 65, affluence: 55, youngProfessionals: 66, families: 82, students: 45, growth: 80,
+      competition: { fitness: 42, food: 55, education: 62, healthcare: 58, retail: 60, beauty: 48, services: 45 },
+    },
+    {
+      id: 'banjara-hills',
+      name: 'Banjara Hills',
+      zone: 'Central Hyderabad',
+      traits: ['Premium residential', 'Hospitals and fine dining', 'Established'],
+      population: 55, footfall: 80, affluence: 98, youngProfessionals: 60, families: 55, students: 35, growth: 35,
+      competition: { fitness: 75, food: 88, education: 45, healthcare: 90, retail: 78, beauty: 88, services: 80 },
+    },
+    {
+      id: 'jubilee-hills',
+      name: 'Jubilee Hills',
+      zone: 'Central Hyderabad',
+      traits: ['Affluent', 'Low density', 'Boutique retail'],
+      population: 45, footfall: 70, affluence: 99, youngProfessionals: 55, families: 58, students: 30, growth: 35,
+      competition: { fitness: 70, food: 85, education: 40, healthcare: 65, retail: 70, beauty: 85, services: 72 },
+    },
+    {
+      id: 'ameerpet',
+      name: 'Ameerpet',
+      zone: 'Central Hyderabad',
+      traits: ['Coaching hub', 'Transit junction', 'Commercial'],
+      population: 80, footfall: 92, affluence: 45, youngProfessionals: 70, families: 45, students: 98, growth: 30,
+      competition: { fitness: 55, food: 70, education: 97, healthcare: 60, retail: 75, beauty: 55, services: 60 },
+    },
+    {
+      id: 'begumpet',
+      name: 'Begumpet',
+      zone: 'Central Hyderabad',
+      traits: ['Office district', 'Older residential', 'Well connected'],
+      population: 60, footfall: 78, affluence: 68, youngProfessionals: 62, families: 50, students: 40, growth: 30,
+      competition: { fitness: 50, food: 68, education: 50, healthcare: 65, retail: 60, beauty: 55, services: 62 },
+    },
+    {
+      id: 'secunderabad',
+      name: 'Secunderabad',
+      zone: 'North Hyderabad',
+      traits: ['Old city core', 'Railway hub', 'Established retail'],
+      population: 88, footfall: 85, affluence: 55, youngProfessionals: 50, families: 78, students: 55, growth: 30,
+      competition: { fitness: 55, food: 72, education: 65, healthcare: 78, retail: 85, beauty: 60, services: 65 },
+    },
+    {
+      id: 'kompally',
+      name: 'Kompally',
+      zone: 'North Hyderabad',
+      traits: ['Growing suburb', 'Villas and townships', 'Family oriented'],
+      population: 55, footfall: 45, affluence: 72, youngProfessionals: 60, families: 78, students: 25, growth: 88,
+      competition: { fitness: 28, food: 35, education: 40, healthcare: 35, retail: 32, beauty: 28, services: 26 },
+    },
+    {
+      id: 'uppal',
+      name: 'Uppal',
+      zone: 'East Hyderabad',
+      traits: ['Metro corridor', 'Affordable housing', 'Industrial edge'],
+      population: 86, footfall: 66, affluence: 42, youngProfessionals: 58, families: 80, students: 50, growth: 62,
+      competition: { fitness: 35, food: 48, education: 60, healthcare: 52, retail: 55, beauty: 40, services: 38 },
+    },
+    {
+      id: 'lb-nagar',
+      name: 'LB Nagar',
+      zone: 'South-East Hyderabad',
+      traits: ['Dense residential', 'Transit junction', 'Value retail'],
+      population: 92, footfall: 82, affluence: 45, youngProfessionals: 55, families: 85, students: 55, growth: 55,
+      competition: { fitness: 48, food: 60, education: 72, healthcare: 70, retail: 78, beauty: 52, services: 50 },
+    },
+    {
+      id: 'dilsukhnagar',
+      name: 'Dilsukhnagar',
+      zone: 'South-East Hyderabad',
+      traits: ['Coaching and colleges', 'Budget retail', 'Very dense'],
+      population: 90, footfall: 88, affluence: 38, youngProfessionals: 55, families: 70, students: 92, growth: 35,
+      competition: { fitness: 45, food: 65, education: 92, healthcare: 62, retail: 80, beauty: 50, services: 48 },
+    },
+  ],
+};

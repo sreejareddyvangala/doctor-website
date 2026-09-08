@@ -15,6 +15,16 @@ export default {
           dark: '#142348',
         },
       },
+      keyframes: {
+        /* Entrance for Area Finder result cards. Disabled by the global reduced-motion rule. */
+        'fade-up': {
+          from: { opacity: '0', transform: 'translateY(8px)' },
+          to: { opacity: '1', transform: 'none' },
+        },
+      },
+      animation: {
+        'fade-up': 'fade-up 0.45s ease-out both',
+      },
     },
   },
   plugins: [],
