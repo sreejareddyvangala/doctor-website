@@ -18,6 +18,10 @@ interface ServiceCardProps {
  * click target.
  */
 export function ServiceCard({ service, eager = false }: ServiceCardProps) {
+  // The Complex Trauma Surgery X-ray carries both prostheses at its very top, so that
+  // one card anchors the crop to the top edge; every other card stays centred.
+  const anchorTop = service.slug === 'complex-trauma-surgery';
+
   return (
     <Link
       to={`/services/${service.slug}`}
@@ -30,7 +34,9 @@ export function ServiceCard({ service, eager = false }: ServiceCardProps) {
           alt={service.imageAlt}
           loading={eager ? 'eager' : 'lazy'}
           decoding="async"
-          className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+          className={`absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 ${
+            anchorTop ? 'object-top' : 'object-center'
+          }`}
         />
       </div>
 
