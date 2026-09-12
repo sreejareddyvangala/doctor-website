@@ -9,8 +9,8 @@ import doctorPhotoSmall from '@/assets/doctor-about-sm.jpg';
 export const doctor = {
   name: 'Dr. S. Kranthi Reddy',
   shortName: 'Dr. Kranthi Reddy',
-  designation: 'CONSULTANT TRAUMA & ARTHROPLASTY SURGEON',
-  designationTitleCase: 'Consultant Trauma & Arthroplasty Surgeon',
+  designation: 'CONSULTANT TRAUMA, ARTHROPLASTY & ARTHROSCOPY SURGEON',
+  designationTitleCase: 'Consultant Trauma, Arthroplasty & Arthroscopy Surgeon',
   experience: '15+ Years of Experience',
   patients: '10,000+ Patients Treated',
   /** The one doctor photograph used across the whole site. */
