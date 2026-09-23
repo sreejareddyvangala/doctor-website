@@ -30,8 +30,6 @@ export function Hero() {
               {doctor.name}
             </h1>
 
-            <p className="mb-6 text-lg font-semibold text-green-600">{doctor.designation}</p>
-
             <div className="mb-8 flex flex-wrap justify-center gap-6 lg:justify-start">
               <div className="text-center">
                 <p className="text-3xl font-bold text-navy">15+</p>

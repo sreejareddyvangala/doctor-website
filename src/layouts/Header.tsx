@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
-import { navItems, SECTION_IDS, contact, doctor, type NavItem } from '@/data/site';
+import { navItems, SECTION_IDS, contact, doctor, logoSrc, type NavItem } from '@/data/site';
 import { serviceLinks } from '@/data/services';
 import { useScrollSpy } from '@/hooks/useScrollSpy';
 import { useIsDesktop } from '@/hooks/useMediaQuery';
@@ -111,16 +111,27 @@ export function Header() {
         scrolled && 'shadow-md',
       )}
     >
-      <div className="container-page flex h-full items-center justify-between">
+      <div className="flex h-full w-full items-center justify-between px-4 sm:px-6">
         {/* Branding */}
         <Link
           to="/"
           onClick={() => setMobileOpen(false)}
-          className="flex flex-col items-start focus:outline-none"
+          className="flex items-center gap-2 focus:outline-none"
         >
-          <span className="text-lg font-bold leading-tight text-blue-700">{doctor.name}</span>
-          <span className="text-xs font-medium leading-tight text-gray-500">
-            Trauma &amp; Arthroplasty Surgeon
+          <img
+            src={logoSrc}
+            alt=""
+            aria-hidden="true"
+            width={1536}
+            height={1024}
+            decoding="async"
+            className="h-11 w-11 flex-shrink-0 object-cover sm:h-12 sm:w-12"
+          />
+          <span className="flex flex-col items-start">
+            <span className="text-lg font-bold leading-tight text-blue-700">{doctor.name}</span>
+            <span className="text-xs font-medium leading-tight text-gray-500">
+              Trauma &amp; Arthroplasty Surgeon
+            </span>
           </span>
         </Link>
 

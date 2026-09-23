@@ -1,6 +1,9 @@
-// A single doctor portrait is used site-wide (white coat with stethoscope).
-import doctorPhoto from '@/assets/doctor-about.jpg';
-import doctorPhotoSmall from '@/assets/doctor-about-sm.jpg';
+// A single doctor portrait is used site-wide (navy scrubs, arms crossed).
+import doctorPhoto from '@/assets/doctor-portrait.webp';
+import logo from '@/assets/logo.webp';
+
+/** Clinic logo — bone/joint mark with a leaf and hand, shown beside the name in the header. */
+export const logoSrc = logo;
 
 /**
  * Single source of truth for doctor identity and contact details.
@@ -15,10 +18,9 @@ export const doctor = {
   patients: '10,000+ Patients Treated',
   /** The one doctor photograph used across the whole site. */
   photo: doctorPhoto,
-  photoWidth: 448,
-  photoHeight: 601,
-  /** 300w variant so phones do not download the full-size portrait. */
-  photoSrcSet: `${doctorPhotoSmall} 300w, ${doctorPhoto} 448w`,
+  photoWidth: 1182,
+  photoHeight: 1330,
+  photoSrcSet: `${doctorPhoto} 1182w`,
   photoAlt:
     'Portrait of Dr. S. Kranthi Reddy, Consultant Trauma and Arthroplasty Surgeon, in navy surgical scrubs',
 } as const;

@@ -2,7 +2,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 import { Container } from '@/components/Container';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
-import { contact, doctor, navItems } from '@/data/site';
+import { contact, doctor, logoSrc, navItems } from '@/data/site';
 import { serviceLinks } from '@/data/services';
 import { scrollToSection } from '@/utils/scroll';
 import { IconPhone } from '@/components/icons';
@@ -27,8 +27,22 @@ export function Footer() {
         <div className="mb-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {/* Identity + contact */}
           <div className="lg:col-span-2">
-            <h3 className="mb-1 text-xl font-bold text-white">{doctor.name}</h3>
-            <p className="mb-3 text-sm font-medium text-blue-400">{doctor.designation}</p>
+            <div className="mb-3 flex items-center gap-3">
+              <img
+                src={logoSrc}
+                alt=""
+                aria-hidden="true"
+                width={1536}
+                height={1024}
+                loading="lazy"
+                decoding="async"
+                className="h-14 w-14 flex-shrink-0 object-cover"
+              />
+              <div>
+                <h3 className="text-xl font-bold text-white">{doctor.name}</h3>
+                <p className="text-sm font-medium text-blue-400">{doctor.designation}</p>
+              </div>
+            </div>
             <p className="mb-4 text-sm leading-relaxed text-gray-400">
               Providing expert orthopaedic care with 15+ years of experience and over 10,000
               patients treated.
