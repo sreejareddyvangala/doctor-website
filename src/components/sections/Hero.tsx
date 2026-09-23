@@ -19,16 +19,16 @@ export function Hero() {
         <div className="flex flex-col items-center gap-10 lg:flex-row lg:gap-16">
           {/* Copy */}
           <div className="flex-1 text-center lg:text-left">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-green-600">
-              {doctor.designationTitleCase}
-            </p>
-
             <h1
               id="hero-heading"
-              className="mb-4 text-4xl font-bold leading-tight text-navy sm:text-5xl lg:text-6xl"
+              className="mb-3 text-4xl font-bold leading-tight text-navy sm:text-5xl lg:text-6xl"
             >
               {doctor.name}
             </h1>
+
+            <p className="mb-8 text-sm font-semibold uppercase tracking-widest text-green-600">
+              {doctor.designationTitleCase}
+            </p>
 
             <div className="mb-8 flex flex-wrap justify-center gap-6 lg:justify-start">
               <div className="text-center">
